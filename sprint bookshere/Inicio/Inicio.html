@@ -73,42 +73,42 @@
             <!-- GRADE DE LIVROS -->
             <section class="grade-livros">
 
-                <div class="item-livro">
+                <div class="item-livro" data-desc="Uma aventura sombria no mundo paralelo.">
                     <img src="imgs/coraline.png">
                     <p>Coraline</p>
                 </div>
 
-                <div class="item-livro">
+                <div class="item-livro" data-desc="Mistério e magia em uma cidade litorânea.">
                     <img src="imgs/maldicao-mar.png">
                     <p>A maldição do mar</p>
                 </div>
 
-                <div class="item-livro">
+                <div class="item-livro" data-desc="Um vilão e sua assistente em uma história inusitada.">
                     <img src="imgs/assistente-vilao.png">
                     <p>Assistente<br>do Vilão</p>
                 </div>
 
-                <div class="item-livro">
+                <div class="item-livro" data-desc="O despertar de um poder antigo e esquecido.">
                     <img src="imgs/lua-caida.png">
                     <p>O despertar<br>da Lua caída</p>
                 </div>
 
-                <div class="item-livro">
+                <div class="item-livro" data-desc="Uma rainha poderosa enfrenta seu destino.">
                     <img src="imgs/rainha-chamas.png">
                     <p>Rainha<br>de Chamas</p>
                 </div>
 
-                <div class="item-livro">
+                <div class="item-livro" data-desc="Um romance misterioso cheio de reviravoltas.">
                     <img src="imgs/noiva.png">
                     <p>A Noiva</p>
                 </div>
 
-                <div class="item-livro">
+                <div class="item-livro" data-desc="Um mundo fantástico entre nevoa e fúria.">
                     <img src="imgs/coraca-furia.png">
                     <p>Coração da<br>Névoa e Fúria</p>
                 </div>
 
-                <div class="item-livro">
+                <div class="item-livro" data-desc="Um romance apaixonante e leve.">
                     <img src="imgs/voce-me-ganhou.png">
                     <p>Você me Ganhou<br>no Olhar</p>
                 </div>
@@ -119,6 +119,22 @@
 
     </div>
 
+</div>
+
+<!-- POPUP -->
+<div class="popup-overlay" id="popupOverlay">
+    <div class="popup-livro" id="popupLivro">
+        
+        <img id="popupImg">
+
+        <div class="popup-info">
+            <h2 id="popupTitulo"></h2>
+            <p id="popupDescricao"></p>
+
+            <button id="btnAdicionar">Adicionar à Biblioteca</button>
+        </div>
+
+    </div>
 </div>
 
 <script src="Inicio.js"></script>

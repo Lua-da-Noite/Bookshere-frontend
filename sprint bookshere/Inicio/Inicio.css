@@ -1,4 +1,3 @@
-
 /* Fonte Global */
 body {
     font-family: "Poppins", sans-serif;
@@ -47,7 +46,7 @@ nav.barra-lateral {
     position: absolute;  
     top: 0;
     left: 0;
-    z-index: 10;
+    z-index: 9100;
     overflow: hidden;
     transition: 0.7s;
     display: flex;
@@ -70,8 +69,9 @@ nav.barra-lateral.expandir {
     font-size: 40px;
     cursor: pointer;
     margin-left: 20px;
+    position: relative;
+    z-index: 9101;
 }
-
 
 nav.barra-lateral ul {
     list-style: none;
@@ -128,7 +128,6 @@ nav.barra-lateral.expandir ul li.iten-menu a span.txt-icon {
     position: relative;
 }
 
-
 /* CAMPO DE PESQUISA */
 
 .campo-pesquisa {
@@ -155,7 +154,6 @@ nav.barra-lateral.expandir ul li.iten-menu a span.txt-icon {
     color: #5b3c2a;
 }
 
-
 /* GRADE DE LIVROS */
 
 .grade-livros {
@@ -167,6 +165,7 @@ nav.barra-lateral.expandir ul li.iten-menu a span.txt-icon {
 
 .item-livro {
     text-align: center;
+    cursor: pointer;
 }
 
 .item-livro img {
@@ -183,7 +182,6 @@ nav.barra-lateral.expandir ul li.iten-menu a span.txt-icon {
     font-size: 14px;
     color: #4a2f24;
 }
-
 
 /* RESPONSIVIDADE */
 
@@ -236,5 +234,90 @@ nav.barra-lateral.expandir ul li.iten-menu a span.txt-icon {
 
     .grade-livros {
         grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* 📌 POPUP */
+
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.35);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9000;
+    pointer-events: auto; /* NÃO BLOQUEIA CLIQUES */
+}
+
+.popup-livro {
+    width: 650px;
+    background: #fdf5e6;
+    border: 2px solid #b38b6d;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    padding: 25px;
+    display: flex;
+    gap: 25px;
+    animation: abrir .25s ease;
+    pointer-events: auto;
+    z-index: 9001;
+}
+
+.popup-livro img {
+    width: 180px;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid #b38b6d;
+    box-shadow: 0 4px 10px rgba(0,0,0,.25);
+}
+
+.popup-info h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #4a2f24;
+}
+
+.popup-info p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #5b3c2a;
+}
+
+#btnAdicionar {
+    margin-top: 20px;
+    padding: 12px 20px;
+    background: #ba6a5a;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,.25);
+    transition: 0.2s;
+}
+
+#btnAdicionar:hover {
+    background: #9f5649;
+}
+
+@keyframes abrir {
+    from { transform: scale(0.8); opacity: 0; }
+    to   { transform: scale(1); opacity: 1; }
+}
+
+@media (max-width: 700px) {
+    .popup-livro {
+        width: 90%;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 }

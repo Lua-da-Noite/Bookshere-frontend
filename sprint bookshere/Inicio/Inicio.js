@@ -1,24 +1,63 @@
+// =============================
+// ATIVAR ITEM DO MENU
+// =============================
 
+var menuItem = document.querySelectorAll('.iten-menu');
 
-var menuItem = document.querySelectorAll('.iten-menu')//guarda os elemntos do iten-menu
-
-function selectlink(){
-    menuItem.forEach((item)=>
+function selectlink() {
+    menuItem.forEach((item) =>
         item.classList.remove('ativo')
-    )
-    this.classList.add('ativo')
-}//forEach = varedura, nos vetores (variavel com varios valores)  Essa função remove a classe ativo de um item que não clicou e adiciona a classe ativo na que clicou 
+    );
+    this.classList.add('ativo');
+}
+
+menuItem.forEach((item) =>
+    item.addEventListener('click', selectlink)
+);
 
 
-menuItem.forEach((item)=>
-    item.addEventListener('click',selectlink)
-)// escutador de eventos
+// =============================
+// EXPANDIR MENU LATERAL
+// =============================
+
+// botão correto (ícone dentro da div .expandir)
+var btnExp = document.querySelector('.expandir i');
+
+// barra lateral
+var Menuside = document.querySelector('.barra-lateral');
+
+if (btnExp) {
+    btnExp.addEventListener('click', function () {
+        Menuside.classList.toggle('expandir');
+    });
+}
 
 
-//expandir menu
-var btnExp = document.querySelector('#btn-exp')// # porque trabalha com id
-var Menuside = document.querySelector('.barra-lateral')//. porque trabalha com class
+// =============================
+// POPUP AUTOMÁTICO
+// =============================
 
-btnExp.addEventListener('click',function(){
-    Menuside.classList.toggle('expandir')
-})
+function abrirPopup(imgSrc, titulo, descricao) {
+    document.getElementById("popupImg").src = imgSrc;
+    document.getElementById("popupTitulo").innerText = titulo;
+    document.getElementById("popupDescricao").innerText = descricao;
+    document.getElementById("popupOverlay").style.display = "flex";
+}
+
+// fechar ao clicar fora
+document.getElementById("popupOverlay").addEventListener("click", (e) => {
+    if (e.target.id === "popupOverlay") {
+        document.getElementById("popupOverlay").style.display = "none";
+    }
+});
+
+// abrir popup ao clicar no livro
+document.querySelectorAll(".item-livro").forEach(item => {
+    item.addEventListener("click", () => {
+        const img = item.querySelector("img").src;
+        const titulo = item.querySelector("p").innerText.trim();
+        const desc = item.getAttribute("data-desc") || "Descrição não disponível.";
+
+        abrirPopup(img, titulo, desc);
+    });
+});
