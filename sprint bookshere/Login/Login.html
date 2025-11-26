@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta nameviewport="width=device-width, initial-scale=1.0">
+    <title>Login - Bookshere</title>
+
+    <!-- Fonte Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap">
+
+    <!-- Ícones -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="Login.css">
+</head>
+<body>
+
+<div class="container-principal">
+
+    <div class="container-livro">
+
+        <!-- Página Esquerda -->
+        <div class="pagina-esquerda">
+            <h2 class="titulo-boasvindas">
+                Bem-vindo Novamente<br>ao Bookshere
+            </h2>
+
+            <img src = "imgs/estante.png"
+                alt="Estante de livros"
+                class="imagem-estante">
+        </div>
+
+   
+
+
+        <!-- Página Direita -->
+        <div class="pagina-direita">
+
+            <h2 class="titulo-login">Login</h2>
+
+            <form id="formulario-login">
+
+                <div class="campo-input">
+                    <input type="email" id="email" placeholder=" " required>
+                    <label for="email">Email</label>
+                    <span class="icone"><i class="fa-solid fa-envelope"></i></span>
+                </div>
+
+                <div class="campo-input">
+                    <input type="password" id="senha" placeholder=" " required>
+                    <label for="senha">Senha</label>
+                    <span class="icone"><i class="fa-solid fa-lock"></i></span>
+                </div>
+
+                <a class="link-senha">Esqueceu a senha?</a>
+
+                <div class="container-botoes">
+                    <button type="button" class="botao-login">Login</button>
+                    <button type="button" class="botao-cadastro">Cadastre-se</button>
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="Login.js"></script>
+</body>
+</html>

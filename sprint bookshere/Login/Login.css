@@ -1,0 +1,244 @@
+/* Fonte Global */
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #f8d7ba, #ba6a5a);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container Principal */
+.container-principal {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Livro */
+.container-livro {
+    display: flex;
+    width: 900px;
+    height: 520px;
+    background: #fdf5e6;
+    border-radius: 12px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.25);
+    border: 2px solid #b38b6d;
+    transition: 0.2s;
+}
+
+/* Página Esquerda */
+
+.pagina-esquerda {
+    flex: 1;
+    padding: 40px;
+    border-right: 2px solid #c9b19b;
+    text-align: center;
+}
+
+.titulo-boasvindas {
+    margin-top: 10px;
+    font-size: 24px;
+    color: #5b3c2a;
+}
+
+.imagem-estante {
+    width: 100%;
+    margin-top: 140px;
+    filter: sepia(30%);
+}
+
+/* Página Direita */
+
+.pagina-direita {
+    flex: 1;
+    padding: 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulo-login {
+    font-size: 28px;
+    color: #4a2f24;
+    margin-bottom: 25px;
+}
+
+/* LABEL FLUTUANTE */
+
+.campo-input {
+    position: relative;
+    width: 80%;
+    margin: 18px auto;
+}
+
+.campo-input input {
+    width: 100%;
+    padding: 14px 42px 14px 16px;
+    border-radius: 20px;
+    border: 2px solid #e2c4ae;
+    background: #ffe2c8;
+    outline: none;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+/* LABEL NORMAL */
+.campo-input label {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #7b5a4a;
+    transition: 0.22s ease;
+    pointer-events: none;
+    padding: 0 6px;
+    background: transparent;
+    font-size: 15px;
+}
+
+/* LABEL FLUTUANDO */
+.campo-input input:focus + label,
+.campo-input input:not(:placeholder-shown) + label {
+    top: -10px;
+    transform: translateY(0);
+    font-size: 12px;
+    color: #5b3c2a;
+    background: transparent !important;
+}
+
+/* ÍCONES */
+.icone {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #7b5a4a;
+    pointer-events: none;
+}
+
+/* Botões */
+.container-botoes {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.botao-login,
+.botao-cadastro {
+    padding: 10px 25px;
+    border: none;
+    border-radius: 20px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.botao-login {
+    background: #c96b6b;
+    color: white;
+}
+
+.botao-cadastro {
+    background: #f8d3b4;
+    color: #4e2a20;
+}
+
+.botao-login:hover {
+    background: #b55e5e;
+}
+
+.botao-cadastro:hover {
+    background: #e5bda0;
+}
+
+/* ACTIVE */
+.botao-login:active {
+    background: #9f5151;
+    transform: scale(0.97);
+}
+
+.botao-cadastro:active {
+    background: #d1a98a;
+    transform: scale(0.97);
+}
+
+.link-senha {
+    margin-top: 4px;
+    font-size: 14px;
+    color: #7a4e44;
+    cursor: pointer;
+}
+
+/*  RESPONSIVIDADE */
+
+
+@media (max-width: 1000px) {
+    .container-livro {
+        width: 750px;
+        height: 480px;
+    }
+
+    .pagina-esquerda,
+    .pagina-direita {
+        padding: 30px;
+    }
+
+    .imagem-estante {
+        margin-top: 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        height: auto;
+        padding: 40px 0;
+    }
+
+    .container-livro {
+        flex-direction: column;
+        width: 90%;
+        height: auto;
+    }
+
+    .pagina-esquerda {
+        border-right: 0;
+        border-bottom: 2px solid #c9b19b;
+    }
+
+    .imagem-estante {
+        margin-top: 40px;
+        width: 80%;
+    }
+}
+
+/* --- Celulares pequenos (até 480px) --- */
+@media (max-width: 480px) {
+    .titulo-boasvindas {
+        font-size: 20px;
+    }
+
+    .titulo-login {
+        font-size: 22px;
+    }
+
+    .campo-input {
+        width: 90%;
+    }
+
+    .container-botoes {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .botao-login, .botao-cadastro {
+        width: 90%;
+    }
+}
+

@@ -1,0 +1,240 @@
+
+/* Fonte Global */
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #f8d7ba, #ba6a5a);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container Principal */
+
+.container-principal {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+/* Container do Livro */
+.container-livro {
+    display: flex;
+    width: 98vw;
+    height: 95vh;
+    background: #fdf5e6;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    border: 2px solid #b38b6d;
+    overflow: hidden;
+    transition: 0.2s;
+    position: relative;
+}
+
+/* BARRA LATERAL */
+nav.barra-lateral {
+    height: 100%;
+    width: 80px;                
+    background-color: #e5dcd0;
+    border-right: 2px solid #c9b19b;
+    box-shadow: inset -5px 0 7px #b38b6d;
+    padding: 20px 0 40px 0;
+    position: absolute;  
+    top: 0;
+    left: 0;
+    z-index: 10;
+    overflow: hidden;
+    transition: 0.7s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Expandida */
+nav.barra-lateral.expandir {
+    width: 320px; 
+}
+
+.expandir {
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+.expandir > i {
+    color: #4a2f24;
+    font-size: 40px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+
+nav.barra-lateral ul {
+    list-style: none;
+    width: 100%;
+    padding: 0;
+    margin-top: 40px;
+}
+
+nav.barra-lateral ul li.iten-menu {
+    height: 70px;
+    transition: .3s;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+nav.barra-lateral ul li.iten-menu:hover,
+nav.barra-lateral ul li.ativo {
+    background-color: #ba6a5a;
+}
+
+nav.barra-lateral ul li.iten-menu a {
+    color: #4a2f24;
+    text-decoration: none;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+nav.barra-lateral ul li.iten-menu a span.icon {
+    font-size: 40px;
+    margin-left: 20px;
+}
+
+nav.barra-lateral ul li.iten-menu a span.txt-icon {
+    margin-left: 70px;
+    opacity: 0;
+    transition: 0.7s;
+}
+
+nav.barra-lateral.expandir ul li.iten-menu a span.txt-icon {
+    margin-left: 20px;
+    opacity: 1;
+}
+
+/* CONTEÚDO PRINCIPAL */
+
+.conteudo {
+    flex: 1;
+    padding: 25px 40px;
+    transition: 0.7s;
+    position: relative;
+}
+
+
+/* CAMPO DE PESQUISA */
+
+.campo-pesquisa {
+    width: 90%;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.campo-pesquisa input {
+    width: 90%;
+    padding: 12px 45px 12px 20px;
+    background: #ffffffc4;
+    border: 2px solid #d8c0af;
+    border-radius: 20px;
+    font-size: 20px;
+    margin-left: 130px;
+}
+
+.campo-pesquisa i {
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #5b3c2a;
+}
+
+
+/* GRADE DE LIVROS */
+
+.grade-livros {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    padding-top: 80px;
+}
+
+.item-livro {
+    text-align: center;
+}
+
+.item-livro img {
+    width: 110px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid #b38b6d;
+    box-shadow: 0 4px 10px rgba(0,0,0,.25);
+}
+
+.item-livro p {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #4a2f24;
+}
+
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 900px) {
+    .grade-livros {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+
+    .container-livro {
+        flex-direction: column;
+        height: auto;
+        width: 90%;
+    }
+
+    nav.barra-lateral {
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        justify-content: center;
+        border-right: none;
+        border-bottom: 2px solid #c9b19b;
+        padding: 15px 0;
+        box-shadow: none;
+        position: relative; 
+    }
+
+    nav.barra-lateral ul {
+        flex-direction: row;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    nav.barra-lateral ul li.iten-menu {
+        height: auto;
+        padding: 10px;
+    }
+
+    nav.barra-lateral ul li.iten-menu a {
+        font-size: 18px;
+        line-height: normal;
+    }
+
+    .conteudo {
+        padding: 20px;
+    }
+
+    .grade-livros {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

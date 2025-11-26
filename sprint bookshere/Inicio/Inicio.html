@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta nameviewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Bookshere</title>
+
+    <!-- Fonte Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap">
+
+    <!-- Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="Inicio.css">
+</head>
+<body>
+
+<div class="container-principal">
+
+    <div class="container-livro">
+
+        <nav class="barra-lateral">
+            
+            <div class="expandir">
+                <i class="fa-solid fa-bars" id="btn-exp"></i>
+            </div>
+            
+            <ul>
+                <li class="iten-menu ativo">
+                    <a href="#">
+                        <span class="icon"> 
+                        <i class="fa-solid fa-house"></i>
+                        </span>
+                        <span class="txt-icon">Inicio</span>
+                    </a>
+                </li>
+            </ul>
+
+            <ul>
+                <li class="iten-menu ativo">
+                    <a href="#">
+                        <span class="icon"> 
+                        <i class="fa-solid fa-book"></i>
+                        </span>
+                        <span class="txt-icon">Catalogo</span>
+                    </a>
+                </li>
+            </ul>
+
+            <ul>
+                <li class="iten-menu ativo">
+                    <a href="#">
+                        <span class="icon"> 
+                        <i class="fa-solid fa-user"></i>
+                        </span>
+                        <span class="txt-icon">Perfil</span>
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+
+        <!-- CONTEÚDO PRINCIPAL -->
+        <main class="conteudo">
+
+            <!-- BUSCA -->
+            <div class="campo-pesquisa">
+                <input type="text" placeholder="Pesquise seus livros aqui">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+
+            <!-- GRADE DE LIVROS -->
+            <section class="grade-livros">
+
+                <div class="item-livro">
+                    <img src="imgs/coraline.png">
+                    <p>Coraline</p>
+                </div>
+
+                <div class="item-livro">
+                    <img src="imgs/maldicao-mar.png">
+                    <p>A maldição do mar</p>
+                </div>
+
+                <div class="item-livro">
+                    <img src="imgs/assistente-vilao.png">
+                    <p>Assistente<br>do Vilão</p>
+                </div>
+
+                <div class="item-livro">
+                    <img src="imgs/lua-caida.png">
+                    <p>O despertar<br>da Lua caída</p>
+                </div>
+
+                <div class="item-livro">
+                    <img src="imgs/rainha-chamas.png">
+                    <p>Rainha<br>de Chamas</p>
+                </div>
+
+                <div class="item-livro">
+                    <img src="imgs/noiva.png">
+                    <p>A Noiva</p>
+                </div>
+
+                <div class="item-livro">
+                    <img src="imgs/coraca-furia.png">
+                    <p>Coração da<br>Névoa e Fúria</p>
+                </div>
+
+                <div class="item-livro">
+                    <img src="imgs/voce-me-ganhou.png">
+                    <p>Você me Ganhou<br>no Olhar</p>
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+</div>
+
+<script src="Inicio.js"></script>
+</body>
+</html>
