@@ -1,0 +1,146 @@
+/* Fonte Global */
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #f8d7ba, #ba6a5a);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container Principal */
+.container-principal {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.container-Fundo {
+    display: flex;
+    width: 98vw;
+    height: 95vh;
+    background: #fdf5e6;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    border: 2px solid #3a281a;
+    overflow: hidden;
+    transition: 0.2s;
+    position: relative;
+}
+
+/* BARRA LATERAL */
+nav.barra-lateral {
+    height: 100%;
+    width: 80px;                
+    background-color: #e5dcd0;
+    border-right: 2px solid #c9b19b;
+    box-shadow: inset -5px 0 7px #b38b6d;
+    padding: 20px 0 40px 0;
+    position: absolute;  
+    top: 0;
+    left: 0;
+    z-index: 9100;
+    overflow: hidden;
+    transition: 0.7s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Expandida */
+nav.barra-lateral.expandir {
+    width: 320px; 
+}
+
+.expandir {
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+.expandir > i {
+    color: #4a2f24;
+    font-size: 40px;
+    cursor: pointer;
+    margin-left: 20px;
+    position: relative;
+    z-index: 9101;
+}
+
+nav.barra-lateral ul {
+    list-style: none;
+    width: 100%;
+    padding: 0;
+    margin-top: 40px;
+}
+
+nav.barra-lateral ul li.iten-menu {
+    height: 70px;
+    transition: .3s;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+nav.barra-lateral ul li.iten-menu a {
+    color: #4a2f24;
+    text-decoration: none;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+nav.barra-lateral ul li.iten-menu a span.icon {
+    font-size: 40px;
+    margin-left: 20px;
+}
+
+nav.barra-lateral ul li.iten-menu a span.txt-icon {
+    margin-left: 70px;
+    opacity: 0;
+    transition: 0.7s;
+}
+
+nav.barra-lateral.expandir ul li.iten-menu a span.txt-icon {
+    margin-left: 20px;
+    opacity: 1;
+}
+
+nav.barra-lateral ul li.iten-menu:hover {
+    background-color: #9f5649; 
+}
+
+.conteudo-area {
+    width: 82%;
+    height: 85%;
+    margin-left: 130px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+}
+
+.caixa-conteudo {
+    width: 100%;
+    height: 45%;
+    background: linear-gradient(to bottom, #fcd9b6, #ee9ca7);
+    border-radius: 18px;
+    border: 2px solid #b9a89c;
+    padding: 12px 18px;
+    box-sizing: border-box;
+    box-shadow: -4px 4px 6px rgba(0,0,0,0.2);
+}
+
+.titulo-caixa {
+    font-size: 14px;
+    margin: 0;
+    color: #3b2a1f;
+    font-weight: 500;
+}

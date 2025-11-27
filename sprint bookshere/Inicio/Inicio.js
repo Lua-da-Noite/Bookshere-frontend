@@ -34,30 +34,42 @@ if (btnExp) {
 
 
 // =============================
-// POPUP AUTOMÁTICO
+// POPUP DE LIVRO
 // =============================
 
-function abrirPopup(imgSrc, titulo, descricao) {
-    document.getElementById("popupImg").src = imgSrc;
-    document.getElementById("popupTitulo").innerText = titulo;
-    document.getElementById("popupDescricao").innerText = descricao;
-    document.getElementById("popupOverlay").style.display = "flex";
-}
+const itens = document.querySelectorAll(".item-livro");
+const popup = document.getElementById("popupOverlay");
+const popupImg = document.getElementById("popupImg");
+const popupTitulo = document.getElementById("popupTitulo");
+const popupDescricao = document.getElementById("popupDescricao");
+const btnAdicionar = document.getElementById("btnAdicionar");
 
-// fechar ao clicar fora
-document.getElementById("popupOverlay").addEventListener("click", (e) => {
-    if (e.target.id === "popupOverlay") {
-        document.getElementById("popupOverlay").style.display = "none";
+let livroSelecionado = null;
+
+itens.forEach(item => {
+    item.addEventListener("click", () => {
+        let img = item.querySelector("img").src;
+        let titulo = item.querySelector("p").innerText;
+        let desc = item.dataset.desc;
+
+        livroSelecionado = {
+            img: img,
+            titulo: titulo,
+            descricao: desc
+        };
+
+        popupImg.src = img;
+        popupTitulo.innerText = titulo;
+        popupDescricao.innerText = desc;
+
+        popup.style.display = "flex";
+    });
+});
+
+// Fechar popup ao clicar fora
+popup.addEventListener("click", (e) => {
+    if (e.target === popup) {
+        popup.style.display = "none";
     }
 });
 
-// abrir popup ao clicar no livro
-document.querySelectorAll(".item-livro").forEach(item => {
-    item.addEventListener("click", () => {
-        const img = item.querySelector("img").src;
-        const titulo = item.querySelector("p").innerText.trim();
-        const desc = item.getAttribute("data-desc") || "Descrição não disponível.";
-
-        abrirPopup(img, titulo, desc);
-    });
-});

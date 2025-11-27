@@ -12,7 +12,7 @@
     <!-- Ícones -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    <link rel="stylesheet" href="Usuario.css">
+    <link rel="stylesheet" href="Catalogo.css">
 </head>
 <body>
 
@@ -40,7 +40,7 @@
 
             <ul>
                 <li class="iten-menu">
-                    <a href="../Catalogo/catalogo.html">
+                    <a href="#">
                         <span class="icon"> 
                             <i class="fa-solid fa-book"></i>
                         </span>
@@ -73,68 +73,27 @@
 
         </nav>
 
-        <!-- CONTEÚDO -->
-        <div class="conteudo">
+        <!-- ÁREA DE CONTEÚDO PRINCIPAL      -->
 
-            <!-- BLOCO 1 - INFORMAÇÕES DO USUÁRIO -->
-            <section class="bloco-info">
+        <div class="conteudo-area">
 
-                <div class="left-info">
-                    <h3>Informações de usuário</h3>
+            <!-- Caixa 1 -->
+            <div class="caixa-conteudo">
+                <p class="titulo-caixa">Minha biblioteca</p>
+            </div>
 
-                    <input type="text" placeholder="Email">
-                    <input type="text" placeholder="Estado">
-                    <input type="email" placeholder="Telefone">
-                    <input type="number" placeholder="Idade">
-                </div>
+            <!-- Caixa 2 -->
+            <div class="caixa-conteudo">
+                <p class="titulo-caixa">Meus livros postados</p>
+            </div>
 
-                <div class="right-info">
+        </div>
 
-                    <!-- Foto do usuário -->
-                    <label class="foto-perfil">
-                        <i class="fa-solid fa-camera"></i>
-                        <input type="file" id="fotoUsuario" accept="image/*">
-                    </label>
+    </div>
 
-                    <p class="nome-user">Nome de usuário</p>
-                    <p class="descricao-user">Descrição</p>
-                </div>
+</div>
 
-            </section>
-
-            <!-- BLOCO 2 – LIVROS -->
-            <section class="bloco-livros">
-
-                <div class="left-livros">
-                    <h3>Livros</h3>
-
-                    <input type="text" placeholder="Título">
-                    <input type="text" placeholder="Idioma">
-                    <input type="text" placeholder="Editora">
-                    <input type="text" placeholder="Descrição">
-                </div>
-
-                <div class="right-livros">
-
-                    <!-- Foto do livro igual à foto do usuário -->
-                    <label class="foto-livro">
-                        <i class="fa-solid fa-camera"></i>
-                        <input type="file" id="fotoLivro" accept="image/*">
-                    </label>
-
-                    <!-- Botão cadastrar -->
-                    <button class="btn-cadastrar-livro">Cadastrar</button>
-
-                </div>
-
-            </section>
-
-        </div> 
-
-    </div> 
-</div> 
-
-<script src="Usuario.js"></script>
+<script src="Catalogo.js"></script>
 
 </body>
 </html>
