@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Bookshere</title>
+
+    <!-- Fonte Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap">
+
+    <!-- Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="Usuario.css">
+</head>
+<body>
+
+<div class="container-principal">
+
+    <div class="container-Fundo">
+
+        <!-- NAV LATERAL -->
+        <nav class="barra-lateral">
+            
+            <div class="expandir">
+                <i class="fa-solid fa-bars" id="btn-exp"></i>
+            </div>
+            
+            <ul>
+                <li class="iten-menu ativo">
+                    <a href="../Inicio/Inicio.html">
+                        <span class="icon"> 
+                            <i class="fa-solid fa-house"></i>
+                        </span>
+                        <span class="txt-icon">Inicio</span>
+                    </a>
+                </li>
+            </ul>
+
+            <ul>
+                <li class="iten-menu">
+                    <a href="#">
+                        <span class="icon"> 
+                            <i class="fa-solid fa-book"></i>
+                        </span>
+                        <span class="txt-icon">Catálogo</span>
+                    </a>
+                </li>
+            </ul>
+
+            <ul>
+                <li class="iten-menu">
+                    <a href="../Usuario/Usuario.html">
+                        <span class="icon"> 
+                            <i class="fa-solid fa-user"></i>
+                        </span>
+                        <span class="txt-icon">Perfil</span>
+                    </a>
+                </li>
+            </ul>
+
+            <ul>
+                <li class="iten-menu">
+                    <a href="#">
+                        <span class="icon"> 
+                            <i class="fa-solid fa-door-open"></i>
+                        </span>
+                        <span class="txt-icon">Sair</span>
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+
+        <!-- CONTEÚDO -->
+        <div class="conteudo">
+
+            <!-- BLOCO 1 - INFORMAÇÕES DO USUÁRIO -->
+            <section class="bloco-info">
+
+                <div class="left-info">
+                    <h3>Informações de usuário</h3>
+
+                    <input type="text" placeholder="Email">
+                    <input type="text" placeholder="Estado">
+                    <input type="email" placeholder="Telefone">
+                    <input type="number" placeholder="Idade">
+                </div>
+
+                <div class="right-info">
+
+                    <!-- Foto do usuário -->
+                    <label class="foto-perfil">
+                        <i class="fa-solid fa-camera"></i>
+                        <input type="file" id="fotoUsuario" accept="image/*">
+                    </label>
+
+                    <p class="nome-user">Nome de usuário</p>
+                    <p class="descricao-user">Descrição</p>
+                </div>
+
+            </section>
+
+            <!-- BLOCO 2 – LIVROS -->
+            <section class="bloco-livros">
+
+                <div class="left-livros">
+                    <h3>Livros</h3>
+
+                    <input type="text" placeholder="Título">
+                    <input type="text" placeholder="Idioma">
+                    <input type="text" placeholder="Editora">
+                    <input type="text" placeholder="Descrição">
+                </div>
+
+                <div class="right-livros">
+
+                    <!-- Foto do livro igual à foto do usuário -->
+                    <label class="foto-livro">
+                        <i class="fa-solid fa-camera"></i>
+                        <input type="file" id="fotoLivro" accept="image/*">
+                    </label>
+
+                    <!-- Botão cadastrar -->
+                    <button class="btn-cadastrar-livro">Cadastrar</button>
+
+                </div>
+
+            </section>
+
+        </div> 
+
+    </div> 
+</div> 
+
+<script src="Usuario.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,256 @@
+/* Fonte Global */
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #f8d7ba, #ba6a5a);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container Principal */
+.container-principal {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.container-Fundo {
+    display: flex;
+    width: 98vw;
+    height: 95vh;
+    background: #fdf5e6;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    border: 2px solid #3a281a;
+    overflow: hidden;
+    transition: 0.2s;
+    position: relative;
+}
+
+/* BARRA LATERAL */
+nav.barra-lateral {
+    height: 100%;
+    width: 80px;                
+    background-color: #e5dcd0;
+    border-right: 2px solid #c9b19b;
+    box-shadow: inset -5px 0 7px #b38b6d;
+    padding: 20px 0 40px 0;
+    position: absolute;  
+    top: 0;
+    left: 0;
+    z-index: 9100;
+    overflow: hidden;
+    transition: 0.7s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Expandida */
+nav.barra-lateral.expandir {
+    width: 320px; 
+}
+
+.expandir {
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+.expandir > i {
+    color: #4a2f24;
+    font-size: 40px;
+    cursor: pointer;
+    margin-left: 20px;
+    position: relative;
+    z-index: 9101;
+}
+
+nav.barra-lateral ul {
+    list-style: none;
+    width: 100%;
+    padding: 0;
+    margin-top: 40px;
+}
+
+nav.barra-lateral ul li.iten-menu {
+    height: 70px;
+    transition: .3s;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+nav.barra-lateral ul li.iten-menu a {
+    color: #4a2f24;
+    text-decoration: none;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+nav.barra-lateral ul li.iten-menu a span.icon {
+    font-size: 40px;
+    margin-left: 20px;
+}
+
+nav.barra-lateral ul li.iten-menu a span.txt-icon {
+    margin-left: 70px;
+    opacity: 0;
+    transition: 0.7s;
+}
+
+nav.barra-lateral.expandir ul li.iten-menu a span.txt-icon {
+    margin-left: 20px;
+    opacity: 1;
+}
+
+nav.barra-lateral ul li.iten-menu:hover {
+    background-color: #9f5649; 
+}
+
+/* CONTEÚDO PRINCIPAL */
+.conteudo {
+    flex: 1;
+    padding: 25px 40px;
+    transition: 0.7s;
+    position: relative;
+}
+
+/* ============================ */
+/* BLOCO 1 - INFORMAÇÕES DO USUÁRIO */
+/* ============================ */
+
+.bloco-info {
+    width: 90%;
+    height: 45%;
+    margin: 10px auto; /* espaço entre os blocos */
+    background: linear-gradient(to bottom, #f8d7ba, #eba08b);
+    border-radius: 18px;
+    display: flex;
+    padding: 25px;
+    border: 2px solid #c69d86;
+}
+
+/* Inputs lado esquerdo */
+.left-info {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.left-info input {
+    padding: 7px 12px;
+    border-radius: 10px;
+    border: 2px solid #d8c0af;
+    font-size: 14px;
+    background: #ffd5e0a9;
+}
+
+/* Foto do usuário */
+.right-info {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    justify-content: center;
+    text-align: center;
+}
+
+.foto-perfil {
+    width: 180px;
+    height: 180px;
+    border: 2px solid #b38b6d;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.foto-perfil i {
+    font-size: 45px;
+    color: #4a2f24;
+}
+
+/* ============================ */
+/* BLOCO 2 - LIVROS */
+/* ============================ */
+
+.bloco-livros {
+    width: 90%;
+    height: 45%;
+    margin: 10px auto; /* espaço entre os blocos */
+    background: linear-gradient(to bottom, #f8d7ba, #eba08b);
+    border-radius: 18px;
+    display: flex;
+    gap: 20px;
+    padding: 25px;
+    border: 2px solid #c69d86;
+}
+
+/* Inputs */
+.left-livros,
+.right-livros {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.left-livros input {
+    padding: 7px 12px;
+    border-radius: 10px;
+    border: 2px solid #d8c0af;
+    background: #ffd5e0a9;
+}
+
+/* FOTO DO LIVRO IGUAL À DO USUÁRIO */
+.foto-livro {
+    width: 180px;
+    height: 180px;
+    border: 2px solid #b38b6d;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin: 0 auto 10px auto;
+}
+
+.foto-livro i {
+    font-size: 45px;
+    color: #4a2f24;
+}
+
+/* Botão Cadastrar abaixo da foto */
+.btn-cadastrar-livro {
+    width: 180px;
+    padding: 10px 0;
+    background: #ba6a5a;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+.btn-cadastrar-livro:hover {
+    background: #9f5649;
+}
+
+/* INPUT FILE INVISÍVEL */
+input[type="file"] {
+    display: none;
+}

@@ -88,10 +88,6 @@ nav.barra-lateral ul li.iten-menu {
     cursor: pointer;
 }
 
-nav.barra-lateral ul li.iten-menu:hover,
-nav.barra-lateral ul li.ativo {
-    background-color: #ba6a5a;
-}
 
 nav.barra-lateral ul li.iten-menu a {
     color: #4a2f24;
@@ -117,6 +113,10 @@ nav.barra-lateral ul li.iten-menu a span.txt-icon {
 nav.barra-lateral.expandir ul li.iten-menu a span.txt-icon {
     margin-left: 20px;
     opacity: 1;
+}
+
+nav.barra-lateral ul li.iten-menu:hover {
+    background-color: #9f5649; 
 }
 
 /* CONTEÚDO PRINCIPAL */
